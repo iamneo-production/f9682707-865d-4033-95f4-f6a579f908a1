@@ -13,6 +13,11 @@
         <sonar.tests></sonar.tests>
         <sonar.java.binaries>target</sonar.java.binaries>
     </properties>
+    	<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
