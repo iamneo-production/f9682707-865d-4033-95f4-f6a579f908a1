@@ -1,4 +1,4 @@
-package com.examly.springapp.Controller;
+package com.example.springapp.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.examly.springapp.Model.Product;
-import com.examly.springapp.Service.ProductService;
+import com.example.springapp.Model.Product;
+import com.example.springapp.Service.ProductService;
 
 
 
