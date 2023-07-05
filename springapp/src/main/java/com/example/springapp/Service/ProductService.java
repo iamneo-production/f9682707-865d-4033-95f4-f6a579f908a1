@@ -1,8 +1,8 @@
-package com.examly.springapp.Service;
+package com.example.springapp.Service;
 
 import java.util.List;
 
-import com.examly.springapp.Model.Product;
+import com.example.springapp.Model.Product;
 
 
 

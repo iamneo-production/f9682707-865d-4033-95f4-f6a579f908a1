@@ -1,7 +1,5 @@
-package com.examly.springapp.Model;
-import jakarta.persistance.*;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+package com.example.springapp.Model;
+import javax.persistence.*;
 
 @Entity
 public class Product {

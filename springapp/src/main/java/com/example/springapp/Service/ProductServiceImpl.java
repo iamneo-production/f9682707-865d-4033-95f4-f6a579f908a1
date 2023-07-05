@@ -1,18 +1,18 @@
-package com.examly.springapp.Service;
+package com.example.springapp.Service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.examly.springapp.Model.Product;
-import com.examly.springapp.Repository.ProductRepo;
+import com.example.springapp.Model.Product;
+import com.example.springapp.Repository.ProductRepository;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
 	@Autowired
-	private ProductRepo productRepo;
+	private ProductRepository productRepo;
 
 	@Override
 	public Product saveProduct(Product product) {
