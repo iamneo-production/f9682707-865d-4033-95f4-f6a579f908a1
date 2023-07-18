@@ -9,14 +9,16 @@ import com.example.springapp.Model.Product;
 
 public interface ProductService {
 
-	public Product saveProduct(Product product);
+	public List<Product> getProducts();
 
-	public List<Product> getAllProduct();
+	public void editProduct(Product product);
 
-	public Product getProductById(Long id);
+	void saveProduct(Product product);
 
-	public String deleteProduct(Long id);
+	public int getTotalQuantity();
 
-	public Product editProduct(Product product,Long id);
+	public List<Product> getProductsByQuantityLessThanSix();
+
+	public void deleteProduct(int id);
 	
 }

@@ -14,42 +14,58 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.springapp.Model.Product;
 import com.example.springapp.Service.ProductService;
 
-
-
-
-
-
+import com.example.springapp.Repository.ProductRepository;
+import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:8081")
 @RestController
 public class ProductController {
 
 	@Autowired
-	private ProductService productService;
+	ProductService product;
 
-	@PostMapping("/product/saveProduct")
-	public ResponseEntity<?> saveProduct(@RequestBody Product product) {
-		return new ResponseEntity<>(productService.saveProduct(product), HttpStatus.CREATED);
+	@Autowired
+	ProductRepository dao;
+
+	@PostMapping("/products")
+	public void product(@RequestBody Product p) {
+		product.saveProduct(p);
 	}
 
-	@GetMapping("/product/")
-	public ResponseEntity<?> getAllProduct() {
-		return new ResponseEntity<>(productService.getAllProduct(), HttpStatus.OK);
+	
+	@GetMapping("/products")
+	public List<Product> getpro() {
+		return product.getProducts();
 	}
 
-	@GetMapping("/product/{id}")
-	public ResponseEntity<?> getProductById(@PathVariable Long id) {
-		return new ResponseEntity<>(productService.getProductById(id), HttpStatus.OK);
+	@GetMapping("/total")
+	public int total() {
+		return product.getTotalQuantity();
 	}
 
-	@DeleteMapping("/product/deleteProduct/{id}")
-	public ResponseEntity<?> deleteProduct(@PathVariable Long id) {
-		return new ResponseEntity<>(productService.deleteProduct(id), HttpStatus.OK);
+	@GetMapping("/totalert")
+	public int totalert() {
+		return dao.getAlertQuantity();
 	}
 
-	@PutMapping("/product/editProduct/{id}")
-	public ResponseEntity<?> editProduct(@RequestBody Product product, @PathVariable Long id) {
-		return new ResponseEntity<>(productService.editProduct(product, id), HttpStatus.CREATED);
+	@GetMapping("/productsless")
+	public List<Product> getProductsByQuantityLessThanSix() {
+		return product.getProductsByQuantityLessThanSix();
+	}
+
+	@PutMapping("/products")
+	public void putpro(@RequestBody Product p) {
+		product.editProduct(p);
+	}
+
+	@DeleteMapping("/products")
+	public void detpro(int id) {
+		product.deleteProduct(id);
+	}
+
+	@GetMapping("/pg")
+	public int pg(String barcode) {
+		return dao.findIdByBarcode(barcode);
 	}
 	
 

@@ -12,48 +12,51 @@ import com.example.springapp.Repository.ProductRepository;
 public class ProductServiceImpl implements ProductService {
 
 	@Autowired
-	private ProductRepository productRepo;
+	private ProductRepository prodao;
+
+	
+
+	
 
 	@Override
-	public Product saveProduct(Product product) {
-
-		return productRepo.save(product);
+	public List<Product> getProducts() {
+		
+		return prodao.findAll();
 	}
 
 	@Override
-	public List<Product> getAllProduct() {
-		return productRepo.findAll();
+	public void saveProduct(Product product) {
+		prodao.save(product);
 	}
 
 	@Override
-	public Product getProductById(Long id) {
-		return productRepo.findById(id).get();	}
+	public void editProduct(Product product) {
+		
+		
+		
+		
+			prodao.save(product);
+		
 
-	@Override
-	public String deleteProduct(Long id) {
-		Product product = productRepo.findById(id).get();
-
-		if (product != null) {
-			productRepo.delete(product);
-			return "Product Delete Sucessfully";
-		}
-
-		return "Something wrong on server";
+		
 	}
 
 	@Override
-	public Product editProduct(Product p, Long id) {
+	public void deleteProduct(int id) {
+		prodao.deleteById(id);
 
-		Product oldProduct = productRepo.findById(id).get();
+	}
 
-		oldProduct.setName(p.getName());
-		oldProduct.setDescription(p.getDescription());
-		oldProduct.setPrice(p.getPrice());
-		oldProduct.setBarcode(p.getBarcode());
-		oldProduct.setQuantity(p.getQuantity());
-		oldProduct.setLocation(p.getLocation());
+	@Override
+	public int getTotalQuantity() {
+		// TODO Auto-generated method stub
+		return prodao.getTotalQuantity();
+	}
 
-		return productRepo.save(oldProduct);
+	@Override
+	public List<Product> getProductsByQuantityLessThanSix() {
+		// TODO Auto-generated method stub
+		return prodao.findProductsByQuantityLessThanSix();
 	}
 
 }
