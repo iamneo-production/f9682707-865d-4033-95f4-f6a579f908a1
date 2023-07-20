@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>iamneo-production_f9682707-865d-4033-95f4-f6a579f908a1</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+	</natures>
+	<filteredResources>
+		<filter>
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<id>1683554299233</id>
+=======
+<<<<<<< HEAD
+			<id>1682938580295</id>
+=======
+			<id>1683032022632</id>
+>>>>>>> 50785da9042a78c5a8f5e4e6f1dea2d7da4686fc
+>>>>>>> 0da1f6571837c8dbfff3ff984d38072368288acf
+=======
+<<<<<<< HEAD
+			<id>1683035631146</id>
+=======
+			<id>1688550408966</id>
+>>>>>>> 832c504ada618c6142c431be09e6b58602a067a8
+<<<<<<< HEAD
+>>>>>>> da9be43ec91930612776709504513e07888ebffc
+=======
+>>>>>>> 892221a781e0e2f58602875bb91e9be4acf23f98
+>>>>>>> 0da1f6571837c8dbfff3ff984d38072368288acf
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
+</projectDescription>
