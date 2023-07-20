@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.springapp.model.BarcodeScanner;
-// import com.example.springapp.model.Inventory;
+import com.example.springapp.model.Inventory;
  import com.example.springapp.model.Product;
 // import com.example.springapp.model.PurchaseOrder;
 import com.example.springapp.repository.BarcodescannerRepository;
-// import com.example.springapp.repository.Inventorydao;
+import com.example.springapp.repository.InventoryRepository;
 import com.example.springapp.repository.ProductRepository;
-// import com.example.springapp.repository.Purchaseorderdao;
+// import com.example.springapp.repository.PurchaseorderRepository;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -21,8 +21,8 @@ public class ProductServiceImpl implements ProductService {
 	@Autowired
 	ProductRepository prodao;
 
-	// @Autowired
-    // Inventorydao inv;	
+	@Autowired
+    InventoryRepository inv;	
 
 	@Override
 	public List<Product> getAllProduct() {
@@ -43,12 +43,12 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public void editProduct(Product product) {
 		    
-		    // Inventory one=inv.findByProductId(product.getId());
-			// Product two=prodao.findById(product.getId()).orElse(null);
-			//  if(one.getQuantity()==two.getQuantity()){
-			// 	one.setQuantity(product.getQuantity());
-			// 	inv.save(one);
-			//  }
+		    Inventory one=inv.findByProductId(product.getId());
+			Product two=prodao.findById(product.getId()).orElse(null);
+			 if(one.getQuantity()==two.getQuantity()){
+				one.setQuantity(product.getQuantity());
+				inv.save(one);
+			 }
 			 
 			prodao.save(product);	
 	}

@@ -21,8 +21,8 @@ public class Product {
 	private String location;
 	@Column(unique = true)
 	private String barcode;
-	// @OneToMany(mappedBy = "product", cascade = CascadeType.REMOVE)
-	// private List<Inventory> inventory;
+	@OneToMany(mappedBy = "product", cascade = CascadeType.REMOVE)
+	private List<Inventory> inventory;
 
 
 	public Product(){
