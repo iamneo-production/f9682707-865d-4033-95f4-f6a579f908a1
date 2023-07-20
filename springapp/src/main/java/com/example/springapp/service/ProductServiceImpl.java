@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 import com.example.springapp.model.BarcodeScanner;
 import com.example.springapp.model.Inventory;
  import com.example.springapp.model.Product;
-// import com.example.springapp.model.PurchaseOrder;
+  import com.example.springapp.model.PurchaseOrder;
 import com.example.springapp.repository.BarcodescannerRepository;
 import com.example.springapp.repository.InventoryRepository;
 import com.example.springapp.repository.ProductRepository;
-// import com.example.springapp.repository.PurchaseorderRepository;
+ import com.example.springapp.repository.PurchaseOrderRepository;
 
 @Service
 public class ProductServiceImpl implements ProductService {
