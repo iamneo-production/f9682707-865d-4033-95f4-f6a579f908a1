@@ -1,4 +1,7 @@
 package com.example.springapp.controller;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,16 +12,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springapp.model.Product;
+import com.example.springapp.repository.ProductRepository;
 import com.example.springapp.service.ProductService;
 
-import com.example.springapp.repository.ProductRepository;
-import java.util.List;
-
-@CrossOrigin(origins = "http://localhost:8081")
 @RestController
+@CrossOrigin
+@RequestMapping("/api")
 public class ProductController {
 
 	@Autowired
@@ -27,15 +31,21 @@ public class ProductController {
 	@Autowired
 	ProductRepository dao;
 
-	@PostMapping("/products")
-	public void product(@RequestBody Product p) {
-		product.saveProduct(p);
+	@PostMapping("/product")
+	public ResponseEntity<Product> product(@RequestBody Product p) {
+		product.createProduct(p);
+		return ResponseEntity.status(HttpStatus.CREATED).body(p);
 	}
 
 	
-	@GetMapping("/products")
+	@GetMapping("/product")
 	public List<Product> getpro() {
-		return product.getProducts();
+		return product.getAllProduct();
+	}
+
+	@GetMapping("/product/{id}")
+	public Product getid(@PathVariable Long id){
+     return product.getProductById(id);
 	}
 
 	@GetMapping("/total")
@@ -53,20 +63,20 @@ public class ProductController {
 		return product.getProductsByQuantityLessThanSix();
 	}
 
-	@PutMapping("/products")
+	@PutMapping("/product")
 	public void putpro(@RequestBody Product p) {
 		product.editProduct(p);
 	}
 
-	@DeleteMapping("/products")
-	public void detpro(int id) {
+	@DeleteMapping("/product")
+	public void detpro(Long id) {
 		product.deleteProduct(id);
 	}
 
+   
 	@GetMapping("/pg")
 	public int pg(String barcode) {
 		return dao.findIdByBarcode(barcode);
 	}
-	
 
 }
