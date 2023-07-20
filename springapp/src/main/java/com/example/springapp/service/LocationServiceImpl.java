@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.springapp.model.Location;
-import com.example.springapp.repository.Locationdao;
+import com.example.springapp.repository.LocationRepository;
 
 @Service
 public class LocationServiceImpl implements LocationService {
 	@Autowired
-	Locationdao location;
+	LocationRepository location;
 
 	@Override
 	public List<Location> getLocation() {
