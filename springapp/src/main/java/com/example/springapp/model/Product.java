@@ -1,27 +1,35 @@
-package com.example.springapp.Model;
+package com.example.springapp.model;
+
+import java.util.List;
+
+import org.springframework.context.annotation.Description;
+
+
+
 import javax.persistence.*;
 
 @Entity
 public class Product {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
-	
-	private String name;
-	
-	private String description;
-	
-	private Double price;
-	
-	private Long quantity;
-	
-	private String location;
-	
-	private String barcode;
 
-	public Product(int id, String name, String description, Double price, Long quantity, String location,
-			String barcode) {
-		super();
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String name;
+	private String description;
+	private int price;
+	private Long quantity;
+	private String location;
+	@Column(unique = true)
+	private String barcode;
+	@OneToMany(mappedBy = "product", cascade = CascadeType.REMOVE)
+	private List<Inventory> inventory;
+
+
+	public Product(){
+
+	}
+
+	public Product(Long id, String name, String description, int price, Long quantity, String location, String barcode) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
@@ -31,11 +39,13 @@ public class Product {
 		this.barcode = barcode;
 	}
 
-	public Product() {
-		super();
+	public Long getId() {
+		return id;
 	}
 
-	
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
@@ -45,7 +55,7 @@ public class Product {
 		this.name = name;
 	}
 
-	public String getDescription() {
+	public String getdescription() {
 		return description;
 	}
 
@@ -53,22 +63,12 @@ public class Product {
 		this.description = description;
 	}
 
-	public Double getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
-	public void setPrice(Double price) {
+	public void setPrice(int price) {
 		this.price = price;
-	}
-
-	
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public Long getQuantity() {
@@ -94,6 +94,5 @@ public class Product {
 	public void setBarcode(String barcode) {
 		this.barcode = barcode;
 	}
-	
 
 }
