@@ -20,7 +20,7 @@ import com.example.springapp.service.SalesService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api")
+
 public class SalesController {
 
 	@Autowired
