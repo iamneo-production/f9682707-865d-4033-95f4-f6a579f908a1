@@ -1,0 +1,23 @@
+.header{
+    margin-left: 250px;
+}
+
+h1{
+    font-weight: 300;
+}
+
+.add-location{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+input{
+    width: 150px;
+    float: right;
+}
+
+#model{
+    margin-right: 200px;
+}
+
