@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,43 +13,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.springapp.model.Sales;
-
-import com.example.springapp.service.SalesService;
+import com.example.springapp.model.Location;
+import com.example.springapp.service.LocationService;
 
 @RestController
 @CrossOrigin
 
-public class SalesController {
-
+public class LocationsController {
 	@Autowired
-	SalesService sale;
+	LocationService location;
 
-	@PostMapping("/sales")
-	public void setSales(@RequestBody Sales s) {
-
-		sale.setSales(s);
-
+	@PostMapping("/locations")
+	public void setloc(@RequestBody Location l) {
+		location.setLocation(l);
 	}
 
-	
-	@GetMapping("/sales")
-	public List<Sales> getSales() {
-		return sale.getAllSales();
+	@ResponseBody
+	@GetMapping("/locations")
+	public List<Location> getloc() {
+		return location.getLocation();
 	}
 
-	@GetMapping("/sales/{id}")
-	public List<Sales> getSalesBYProductId(@PathVariable Long id) {
-		return sale.getSalesByProductId(id);
+	@PutMapping("/locations")
+	public void putloc(@RequestBody Location l) {
+		location.editLocation(l);
 	}
 
-	@PutMapping("/sales")
-	public void putSales(@RequestBody Sales s) {
-		sale.editSales(s);
-	}
-
-	@DeleteMapping("/sales")
-	public void delSales(Long id) {
-		sale.deleteSales(id);
+	@DeleteMapping("/locations")
+	public void delloc(int id) {
+		location.deleteLocation(id);
 	}
 }

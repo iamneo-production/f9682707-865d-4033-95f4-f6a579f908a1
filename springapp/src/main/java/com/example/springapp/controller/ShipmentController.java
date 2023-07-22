@@ -14,43 +14,40 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.springapp.model.Sales;
+import com.example.springapp.model.Shipment;
 
-import com.example.springapp.service.SalesService;
+import com.example.springapp.service.ShipmentService;
 
 @RestController
 @CrossOrigin
 
-public class SalesController {
+public class ShipmentController {
 
 	@Autowired
-	SalesService sale;
+	ShipmentService shipmentService;
 
-	@PostMapping("/sales")
-	public void setSales(@RequestBody Sales s) {
-
-		sale.setSales(s);
-
+	@PostMapping("/shipment")
+	public void setShipments(@RequestBody Shipment sh) {
+		shipmentService.setShipment(sh);
+	}
+    
+	@GetMapping("/shipment/{id}")
+	public Shipment getid(@PathVariable Long id){
+       return shipmentService.getShipmentById(id);
 	}
 
-	
-	@GetMapping("/sales")
-	public List<Sales> getSales() {
-		return sale.getAllSales();
+	@GetMapping("/shipment")
+	public List<Shipment> getShipments() {
+		return shipmentService.getAllShipment();
 	}
 
-	@GetMapping("/sales/{id}")
-	public List<Sales> getSalesBYProductId(@PathVariable Long id) {
-		return sale.getSalesByProductId(id);
+	@PutMapping("/shipment")
+	public void editShioments(@RequestBody Shipment sh) {
+		shipmentService.editShipment(sh);
 	}
 
-	@PutMapping("/sales")
-	public void putSales(@RequestBody Sales s) {
-		sale.editSales(s);
-	}
-
-	@DeleteMapping("/sales")
-	public void delSales(Long id) {
-		sale.deleteSales(id);
+	@DeleteMapping("/shipment")
+	public void deleteShipments(Long id) {
+		shipmentService.deleteShipment(id);
 	}
 }
