@@ -15,7 +15,7 @@
 import './App.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import Dashboard from './pages/Dashboard/Dashboard'
+import Dashboard from './pages/Dashboard/Dashboard'
  import Alerts from './pages/Alert/Alerts';
 // import Shipments from './pages/shipment/Shipments';
 
@@ -30,11 +30,12 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          {/* <Route exact path="/dashboard" element={<Dashboard />} />
+          {/* 
 
           <Route exact path='/shipments' element={<Shipments />}></Route>
           
           <Route exact path='/sales' element={<Sales />}></Route>*/}
+          <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path='/products' element={<Product />} >
           </Route>
           <Route exact path='/report' element={<Report />}></Route> 
