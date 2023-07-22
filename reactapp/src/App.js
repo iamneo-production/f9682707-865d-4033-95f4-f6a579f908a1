@@ -20,7 +20,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import Shipments from './pages/shipment/Shipments';
 
 // import Sales from './pages/sales/Sales';
-// import Report from './pages/Report/Report';
+ import Report from './pages/Report/Report';
 // import Product from './pages/product/AddProduct'
 import Location from './pages/Location/Home';
 import LoginPage from './pages/login/App';
@@ -36,8 +36,8 @@ function App() {
          
           <Route exact path='/shipments' element={<Shipments />}></Route>
           
-          <Route exact path='/sales' element={<Sales />}></Route>
-          <Route exact path='/report' element={<Report />}></Route> */}
+          <Route exact path='/sales' element={<Sales />}></Route>*/}
+          <Route exact path='/report' element={<Report />}></Route> 
           <Route exact path='/location' element={<Location />}></Route>
           <Route exact path='/alerts' element={<Alerts />}></Route>
           <Route exact path='/login' element={<LoginPage/>}></Route>
