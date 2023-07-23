@@ -20,7 +20,7 @@ function Header() {
     if(!localStorage.getItem("auth")){
       window.location="/login"
     }
-    axios.get("https://8080-fcccdbdeacaabcedefcacfefaabeaeaadbdbabf.project.examly.io/product").then(response=>setpro(response.data)).catch(err=>console.log(err));
+    axios.get("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/product").then(response=>setpro(response.data)).catch(err=>console.log(err));
   },)
 
   const barcode=(item)=>{
@@ -55,7 +55,7 @@ const json={
 
  }
 
-axios.post("https://8080-fcccdbdeacaabcedefcacfefaabeaeaadbdbabf.project.examly.io/sales",json).then(function(response){setwar(response.data)}).catch(function(error){console.log(error)});
+axios.post("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/sales",json).then(function(response){setwar(response.data)}).catch(function(error){console.log(error)});
 
 setTimeout(()=>{
   const ones={
@@ -65,7 +65,7 @@ setTimeout(()=>{
    "timestamp":currentDate
 
   }
-  axios.post("https://8080-fcccdbdeacaabcedefcacfefaabeaeaadbdbabf.project.examly.io/shipment",ones).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
+  axios.post("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/shipment",ones).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
 },10000)
 
 }

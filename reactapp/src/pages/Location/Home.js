@@ -15,7 +15,7 @@ const Home = () => {
     if(!localStorage.getItem("auth")){
       window.location="/login"
     }
-    fetch('https://8080-fcccdbdeacaabcedefcacfefaabeaeaadbdbabf.project.examly.io/locations')
+    fetch('https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/locations')
       .then(res => res.json())
       .then(data => {
         setData(data);
@@ -44,7 +44,7 @@ const Home = () => {
     
    
     
-    axios.delete('https://8080-fcccdbdeacaabcedefcacfefaabeaeaadbdbabf.project.examly.io/locations',{params:{id}}).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
+    axios.delete('https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/locations',{params:{id}}).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
   };
   const submit=()=>{
   let name=document.getElementById("loc").value;
@@ -56,7 +56,7 @@ const Home = () => {
       "address":address,
       "contact":contact
   }
-  axios.post("https://8080-fcccdbdeacaabcedefcacfefaabeaeaadbdbabf.project.examly.io/locations",json).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
+  axios.post("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/locations",json).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
   }
   const store=()=>{
   let id=document.getElementById("one").value;
@@ -70,7 +70,7 @@ const Home = () => {
       "address":address,
       "contact":contact
    }
-   axios.put("https://8080-fcccdbdeacaabcedefcacfefaabeaeaadbdbabf.project.examly.io/locations",json).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
+   axios.put("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/locations",json).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
   }
   return (
 
