@@ -1,0 +1,25 @@
+#card{
+    margin-top: 20px;
+    margin-left: 250px;
+    cursor: pointer;
+    height: 400px;
+}
+
+#h1{
+    margin-left: 250px;
+}
+#card-title{
+    margin: auto;
+}
+#bar{
+    cursor: pointer;
+}
+i{
+    text-align: right;
+}
+
+#war{
+    backgroundColor: #ffe6e6;
+  color: #ff0000;
+  
+}
