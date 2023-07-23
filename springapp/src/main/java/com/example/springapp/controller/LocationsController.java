@@ -18,7 +18,7 @@ import com.example.springapp.service.LocationService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api")
+
 public class LocationsController {
 	@Autowired
 	LocationService location;

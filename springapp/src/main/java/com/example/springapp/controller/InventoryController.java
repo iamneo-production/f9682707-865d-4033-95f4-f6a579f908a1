@@ -23,7 +23,7 @@ import com.example.springapp.service.InventoryService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api")
+
 public class InventoryController {
 	@Autowired
 	InventoryService inventoryService;
