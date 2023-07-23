@@ -1,0 +1,22 @@
+table{
+    margin-left: 250px;
+}
+#add{
+    margin-right: 70px;
+    border-radius: 5px;
+    margin-top: 5px;
+    
+}
+
+input{
+    float: right;
+}
+
+#loca{
+    float: right;
+    width: 56%;
+}
+#locaed{
+    float: right;
+    width: 56%;
+}

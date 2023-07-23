@@ -54,3 +54,5 @@ public class SalesController {
 		sale.deleteSales(id);
 	}
 }
+
+//Bala
