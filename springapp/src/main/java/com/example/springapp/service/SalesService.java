@@ -17,3 +17,4 @@ public interface SalesService {
 
 	public void deleteSales(Long id);
 }
+
