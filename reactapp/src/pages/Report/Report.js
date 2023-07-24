@@ -15,14 +15,14 @@ const [inv,setinv]=useState([]);
     if(!localStorage.getItem("auth")){
       window.location="/login"
     }
-    axios.get("https://8080-fcccdbdeacaabcedefcacfefaabeaeaadbdbabf.project.examly.io/product").then((response) => {
+    axios.get("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/product").then((response) => {
         setpros(response.data)}).catch(err=>console.log(err));
 
-        axios.get("https://8080-fcccdbdeacaabcedefcacfefaabeaeaadbdbabf.project.examly.io/sales").then((response) => {
+        axios.get("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/sales").then((response) => {
         setsell(response.data)}).catch(err=>console.log(err));
 
         
-        axios.get("https://8080-fcccdbdeacaabcedefcacfefaabeaeaadbdbabf.project.examly.io/inventory").then((response) => {
+        axios.get("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/inventory").then((response) => {
           setinv(response.data)}).catch(err=>console.log(err));
       
       
