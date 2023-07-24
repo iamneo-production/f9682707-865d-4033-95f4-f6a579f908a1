@@ -8,4 +8,5 @@ public interface LoginService {
 	
 	public Login logincheck(String username , String password);
 
+	public void credentials();
 }
