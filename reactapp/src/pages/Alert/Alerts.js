@@ -22,9 +22,9 @@ function Alerts() {
     if(!localStorage.getItem("auth")){
       window.location="/login"
     }
-    axios.get("http://localhost:8080/api/productsless").then(response=>setalert(response.data)).catch(err=>console.log(err));
-    axios.get("http://localhost:8080/api/total").then(response=>settot(response.data)).catch(err=>console.log(err));
-    axios.get("http://localhost:8080/api/totalert").then(response=>settotalert(response.data)).catch(err=>console.log(err));
+    axios.get("https://8080-dddaeaedabcedefcacfefaabeaeaadbdbabf.project.examly.io/productsless").then(response=>setalert(response.data)).catch(err=>console.log(err));
+    axios.get("https://8080-dddaeaedabcedefcacfefaabeaeaadbdbabf.project.examly.io/total").then(response=>settot(response.data)).catch(err=>console.log(err));
+    axios.get("https://8080-dddaeaedabcedefcacfefaabeaeaadbdbabf.project.examly.io/totalert").then(response=>settotalert(response.data)).catch(err=>console.log(err));
 },)
 
 const submits=()=>{
@@ -43,7 +43,7 @@ const submits=()=>{
       "supplier":Supplier,
       "timestamp":currentDate
   }
-  axios.post("http://localhost:8080/api/purchase-order",json).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
+  axios.post("https://8080-dddaeaedabcedefcacfefaabeaeaadbdbabf.project.examly.io/purchase-order",json).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
   }
   return (
     <div>

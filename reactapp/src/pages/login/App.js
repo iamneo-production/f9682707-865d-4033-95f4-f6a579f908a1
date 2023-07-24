@@ -27,7 +27,7 @@ function LoginPage() {
       "password": pass
    }
 
-   axios.post("http://localhost:8080/login",credentails).then(res=>{setrest(res.data)
+   axios.post("https://8080-dddaeaedabcedefcacfefaabeaeaadbdbabf.project.examly.io/login",credentails).then(res=>{setrest(res.data)
   
   }).catch(err=>console.log(err)); 
 
