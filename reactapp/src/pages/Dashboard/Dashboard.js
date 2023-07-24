@@ -70,11 +70,6 @@ setTimeout(()=>{
 
 }
 
-// const clo=()=>{
-//   if(war==="Invalid Quantity Entry"){
-//     alert(war);
-//   }
-// }
   return (
 
     <div>
