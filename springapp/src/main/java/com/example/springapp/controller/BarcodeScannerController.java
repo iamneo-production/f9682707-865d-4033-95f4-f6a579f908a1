@@ -19,7 +19,7 @@ import com.example.springapp.service.BarcodeScannerService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api")
+
 public class BarcodeScannerController {
 	@Autowired
 	BarcodeScannerService bcs;
