@@ -1,0 +1,22 @@
+.top {
+    margin-right: 0%;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    background-color: lightblue;
+    min-width: 20%;
+  }
+  
+  #j {
+    color: blanchedalmond;
+  }
+  
+  #drop {
+    margin-left: 35%;
+    width: 200px;
+  }
+  
+  #button {
+    margin-left: 85%;
+    background-color: white;
+    color: black;
+  }
