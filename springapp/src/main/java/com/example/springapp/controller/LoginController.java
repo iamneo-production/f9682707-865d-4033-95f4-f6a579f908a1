@@ -21,6 +21,7 @@ public class LoginController {
 	@PostMapping("/login")
 	public String login(@RequestBody Login login) {
 
+		service.credentials();
 		Login UsernameAuth = service.usercheck(login.getUsername());
 		Login LoginAuth = service.logincheck(login.getUsername(), login.getPassword());
 		if (UsernameAuth != null) {
