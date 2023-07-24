@@ -15,7 +15,7 @@ const Home = () => {
     if(!localStorage.getItem("auth")){
       window.location="/login"
     }
-    fetch('http://localhost:8080/api/locations')
+    fetch('https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/locations')
       .then(res => res.json())
       .then(data => {
         setData(data);
@@ -44,7 +44,7 @@ const Home = () => {
     
    
     
-    axios.delete('http://localhost:8080/api/locations',{params:{id}}).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
+    axios.delete('https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/locations',{params:{id}}).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
   };
   const submit=()=>{
   let name=document.getElementById("loc").value;
@@ -56,7 +56,7 @@ const Home = () => {
       "address":address,
       "contact":contact
   }
-  axios.post("http://localhost:8080/api/locations",json).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
+  axios.post("https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/locations",json).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
   }
   const store=()=>{
   let id=document.getElementById("one").value;
@@ -70,7 +70,7 @@ const Home = () => {
       "address":address,
       "contact":contact
    }
-   axios.put("http://localhost:8080/api/locations",json).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
+   axios.put("https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/locations",json).then(function(response){console.log(response)}).catch(function(error){console.log(error)});
   }
   return (
 
@@ -151,7 +151,7 @@ const Home = () => {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onClick={submit}>Submit</button>
+        <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" onClick={submit}>Submit</button>
       </div>
     </div>
   </div>

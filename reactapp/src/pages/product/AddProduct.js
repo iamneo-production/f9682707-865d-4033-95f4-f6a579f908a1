@@ -15,7 +15,7 @@ const ProductTable = () => {
   const [suppliers, setsuppliers] = useState("");
   const fetchData = () => {
     axios
-      .get("http://localhost:8080/api/products")
+      .get("https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/products")
       .then((response) => {                                        //fecthing data from DB
         setProducts(response.data);
       })
@@ -28,7 +28,7 @@ const ProductTable = () => {
     }
     fetchData();
     axios
-      .get("http://localhost:8080/api/locations")
+      .get("https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/locations")
       .then((response) => {
         setloc(response.data);
       })
@@ -39,7 +39,7 @@ const ProductTable = () => {
   React.useEffect(() => {
     if (bar !== "")
       axios
-        .get(`http://localhost:8080/api/pg?barcode=${bar}`)                   //barcode
+        .get(`https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/pg?barcode=${bar}`)                   //barcode
         .then((res) => setids(res.data))
         .catch((err) => console.log(err));
   }, [bar]);
@@ -65,7 +65,7 @@ const ProductTable = () => {
       };
 
       axios
-        .post("http://localhost:8080/api/inventory", j)
+        .post("https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/inventory", j)
         .then((response2) => {
           console.log(response2);
         })
@@ -80,7 +80,7 @@ const ProductTable = () => {
       };
 
       axios
-        .post("http://localhost:8080/api/purchase-orderss", verdict)
+        .post("https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/purchase-orderss", verdict)
         .then((res) => console.log(res))
         .then((err) => console.log(err));
 
@@ -113,7 +113,7 @@ const ProductTable = () => {
 
     console.log(jsosn);
     axios
-      .put("http://localhost:8080/api/products", jsosn)
+      .put("https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/products", jsosn)
       .then(function (response) {
         console.log(response);
       })
@@ -125,7 +125,7 @@ const ProductTable = () => {
   const deleteProduct = (id) => {                                                   //delete product
     console.log(id);
     axios
-      .delete("http://localhost:8080/api/products", { params: { id } })
+      .delete("https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/products", { params: { id } })
       .then(function (response) {
         console.log(response);
       })
@@ -153,7 +153,7 @@ const ProductTable = () => {
     };
 
     axios
-      .post("http://localhost:8080/api/products", json)
+      .post("https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/products", json)
       .then((res) => {
         setbar(barcode);
         setquan(quantity);
@@ -169,7 +169,7 @@ const ProductTable = () => {
     };
 
     axios
-      .post("http://localhost:8080/api/barcode-scanners", bars)
+      .post("https://8080-bfffcaccabcedefcacfefaabeaeaadbdbabf.project.examly.io/barcode-scanners", bars)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
