@@ -13,6 +13,13 @@ public class LoginServiceImpl implements LoginService {
 	private LoginRepository repo;
 	
 	@Override
+	public void credentials(){
+		Login login = new Login();
+		login.setUsername("team19");
+		login.setPassword("codetitans");
+		repo.save(login);
+	}
+	@Override
 	public Login usercheck(String username) {
 		Login user = repo.findByUsername(username);
 		return user;
