@@ -22,12 +22,83 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
 			<id>1689766795203</id>
+=======
+<<<<<<< HEAD
+			<id>1690184128567</id>
+=======
+<<<<<<< HEAD
+			<id>1690004331529</id>
+=======
+<<<<<<< HEAD
+			<id>1682950030332</id>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<id>1689850221236</id>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<id>1683554380992</id>
+=======
+			<id>1685798199114</id>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<id>1683554299233</id>
+=======
+<<<<<<< HEAD
+			<id>1682938580295</id>
+=======
+			<id>1683032022632</id>
+>>>>>>> 50785da9042a78c5a8f5e4e6f1dea2d7da4686fc
+>>>>>>> 0da1f6571837c8dbfff3ff984d38072368288acf
+>>>>>>> f4759b8091bbdb39b542d0cf2256b17831f323e6
+=======
+<<<<<<< HEAD
+			<id>1683035631146</id>
+=======
+			<id>1688550408966</id>
+>>>>>>> 832c504ada618c6142c431be09e6b58602a067a8
+<<<<<<< HEAD
+>>>>>>> f1802fd919c46fc4e6ca151e491a95432686e0a4
+=======
+<<<<<<< HEAD
+>>>>>>> da9be43ec91930612776709504513e07888ebffc
+=======
+>>>>>>> 892221a781e0e2f58602875bb91e9be4acf23f98
+>>>>>>> 0da1f6571837c8dbfff3ff984d38072368288acf
+>>>>>>> 8de7e22502563137b7f806aa1db2ec365a7fad57
+>>>>>>> f4759b8091bbdb39b542d0cf2256b17831f323e6
+>>>>>>> 7fb7fae164d1eecb268d5852a982baa10e9b9dc8
+=======
+			<id>1688015049454</id>
+=======
+			<id>1689850221236</id>
+>>>>>>> b941ebe4ea57d0dcc5e987bae1949ccbcdd969a7
+>>>>>>> 3638b6526132cd45cc3a95f0d766736b28fc4c1a
+>>>>>>> 5bab074571128215297d896dce5a3b5d48709769
+>>>>>>> 0a3fbbddb648a44acb9611d73f6444919835b648
+>>>>>>> 18f65538ae36903ce63281a49a5d3fb055431630
+>>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
 			<name></name>
 			<type>30</type>
 			<matcher>
 				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+<<<<<<< HEAD
 				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+=======
+<<<<<<< HEAD
+				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+=======
+<<<<<<< HEAD
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+=======
+				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+>>>>>>> 0a3fbbddb648a44acb9611d73f6444919835b648
+>>>>>>> 18f65538ae36903ce63281a49a5d3fb055431630
+>>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
 			</matcher>
 		</filter>
 	</filteredResources>
