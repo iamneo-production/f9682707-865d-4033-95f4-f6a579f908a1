@@ -15,7 +15,6 @@ const [inv,setinv]=useState([]);
     if(!localStorage.getItem("auth")){
       window.location="/login"
     }
-<<<<<<< HEAD
     axios.get("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/product").then((response) => {
         setpros(response.data)}).catch(err=>console.log(err));
 
@@ -24,16 +23,6 @@ const [inv,setinv]=useState([]);
 
         
         axios.get("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/inventory").then((response) => {
-=======
-    axios.get("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/product").then((response) => {
-        setpros(response.data)}).catch(err=>console.log(err));
-
-        axios.get("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/sales").then((response) => {
-        setsell(response.data)}).catch(err=>console.log(err));
-
-        
-        axios.get("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/inventory").then((response) => {
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
           setinv(response.data)}).catch(err=>console.log(err));
       
       

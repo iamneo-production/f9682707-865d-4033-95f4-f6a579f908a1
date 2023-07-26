@@ -27,11 +27,7 @@ function LoginPage() {
       "password": pass
    }
 
-<<<<<<< HEAD
    axios.post("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/login",credentails).then(res=>{setrest(res.data)
-=======
-   axios.post("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/login",credentails).then(res=>{setrest(res.data)
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
   
   }).catch(err=>console.log(err)); 
 

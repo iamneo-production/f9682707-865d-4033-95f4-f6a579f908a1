@@ -15,11 +15,7 @@ const ProductTable = () => {
   const [suppliers, setsuppliers] = useState("");
   const fetchData = () => {
     axios
-<<<<<<< HEAD
       .get("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/product")
-=======
-      .get("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/products")
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
       .then((response) => {                                        //fecthing data from DB
         setProducts(response.data);
       })
@@ -32,11 +28,7 @@ const ProductTable = () => {
     }
     fetchData();
     axios
-<<<<<<< HEAD
       .get("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/locations")
-=======
-      .get("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/locations")
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
       .then((response) => {
         setloc(response.data);
       })
@@ -47,11 +39,7 @@ const ProductTable = () => {
   React.useEffect(() => {
     if (bar !== "")
       axios
-<<<<<<< HEAD
         .get(`https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/pg?barcode=${bar}`)                   //barcode
-=======
-        .get(`https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/pg?barcode=${bar}`)                   //barcode
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
         .then((res) => setids(res.data))
         .catch((err) => console.log(err));
   }, [bar]);
@@ -77,11 +65,7 @@ const ProductTable = () => {
       };
 
       axios
-<<<<<<< HEAD
         .post("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/inventory", j)
-=======
-        .post("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/inventory", j)
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
         .then((response2) => {
           console.log(response2);
         })
@@ -96,11 +80,7 @@ const ProductTable = () => {
       };
 
       axios
-<<<<<<< HEAD
         .post("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/purchase-orderss", verdict)
-=======
-        .post("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/purchase-orderss", verdict)
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
         .then((res) => console.log(res))
         .then((err) => console.log(err));
 
@@ -133,11 +113,7 @@ const ProductTable = () => {
 
     console.log(jsosn);
     axios
-<<<<<<< HEAD
       .put("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/product", jsosn)
-=======
-      .put("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/products", jsosn)
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
       .then(function (response) {
         console.log(response);
       })
@@ -149,11 +125,7 @@ const ProductTable = () => {
   const deleteProduct = (id) => {                                                   //delete product
     console.log(id);
     axios
-<<<<<<< HEAD
       .delete("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/product", { params: { id } })
-=======
-      .delete("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/products", { params: { id } })
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
       .then(function (response) {
         console.log(response);
       })
@@ -181,11 +153,7 @@ const ProductTable = () => {
     };
 
     axios
-<<<<<<< HEAD
       .post("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/product", json)
-=======
-      .post("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/products", json)
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
       .then((res) => {
         setbar(barcode);
         setquan(quantity);
@@ -201,11 +169,7 @@ const ProductTable = () => {
     };
 
     axios
-<<<<<<< HEAD
       .post("https://8080-edeaacdeebabcedefcacfefaabebceecbecadec.project.examly.io/barcode-scanners", bars)
-=======
-      .post("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/barcode-scanners", bars)
->>>>>>> c6f6d4a2f5409f26d1fce3a797ecec160e307440
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
