@@ -18,7 +18,7 @@ function Header() {
   const [war,setwar]=useState("");
   useEffect(()=>{
     if(!localStorage.getItem("auth")){
-      window.location="/login"
+      window.location="/"
     }
     axios.get("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/product").then(response=>setpro(response.data)).catch(err=>console.log(err));
   },)
@@ -62,7 +62,7 @@ setTimeout(()=>{
    "productId":id,
    "quantity":quantity,
    "location":locat,
-   "timestamp":currentDate
+   "date":currentDate
 
   }
   axios.post("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/shipment",ones).then(function(response){console.log(response)}).catch(function(error){console.log(error)});

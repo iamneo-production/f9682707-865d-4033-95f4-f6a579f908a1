@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     if(!localStorage.getItem("auth")){
-      window.location="/login"
+      window.location="/"
     }
     fetch('https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/locations')
       .then(res => res.json())

@@ -9,7 +9,7 @@ function Shipments() {
   const [datas, setdatas] = useState([]);
   useEffect(() => {
     if(!localStorage.getItem("auth")){
-      window.location="/login"
+      window.location="/"
     }
 
     axios.get('https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/shipment') // Replace with your backend endpoint

@@ -10,7 +10,7 @@ const [sal,setsal]=useState([]);
 
     useEffect(()=>{
       if(!localStorage.getItem("auth")){
-        window.location="/login"
+        window.location="/"
       }
         axios.get("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/sales").then(response=>setsal(response.data)).catch(err=>console.log(err));
     },)
@@ -43,7 +43,7 @@ const [sal,setsal]=useState([]);
                 <td>{item.productId}</td>
                 <td>{item.quantity}</td>
                 <td>{item.price}</td>
-                <td>{item.timestamp}</td>
+                <td>{item.date}</td>
                 
                 
               </tr>

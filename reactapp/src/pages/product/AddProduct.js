@@ -15,7 +15,7 @@ const ProductTable = () => {
   const [suppliers, setsuppliers] = useState("");
   const fetchData = () => {
     axios
-      .get("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/products")
+      .get("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/product")
       .then((response) => {                                        //fecthing data from DB
         setProducts(response.data);
       })
@@ -24,7 +24,7 @@ const ProductTable = () => {
 
   React.useEffect(() => {
     if (!localStorage.getItem("auth")) {
-      window.location = "/login";                                             //login
+      window.location = "/";                                             //login
     }
     fetchData();
     axios
@@ -113,7 +113,7 @@ const ProductTable = () => {
 
     console.log(jsosn);
     axios
-      .put("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/products", jsosn)
+      .put("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/product", jsosn)
       .then(function (response) {
         console.log(response);
       })
@@ -125,7 +125,7 @@ const ProductTable = () => {
   const deleteProduct = (id) => {                                                   //delete product
     console.log(id);
     axios
-      .delete("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/products", { params: { id } })
+      .delete("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/product", { params: { id } })
       .then(function (response) {
         console.log(response);
       })
@@ -153,7 +153,7 @@ const ProductTable = () => {
     };
 
     axios
-      .post("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/products", json)
+      .post("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/product", json)
       .then((res) => {
         setbar(barcode);
         setquan(quantity);

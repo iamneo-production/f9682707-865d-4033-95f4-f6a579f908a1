@@ -9,7 +9,7 @@ function Topbox() {
 
   const finish=()=>{
    localStorage.clear();
-   window.location="/login"
+   window.location="/"
   }
   return (
     <div className='top'>

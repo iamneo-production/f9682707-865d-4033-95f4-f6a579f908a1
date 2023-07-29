@@ -20,7 +20,7 @@ function Alerts() {
  
   useEffect(()=>{
     if(!localStorage.getItem("auth")){
-      window.location="/login"
+      window.location="/"
     }
     axios.get("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/productsless").then(response=>setalert(response.data)).catch(err=>console.log(err));
     axios.get("https://8080-cdcaeebeddfbdcceabcedefcacfefaabeaeaadbdbabf.project.examly.io/total").then(response=>settot(response.data)).catch(err=>console.log(err));
