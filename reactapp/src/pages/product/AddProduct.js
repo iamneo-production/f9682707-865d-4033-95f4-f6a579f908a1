@@ -113,7 +113,7 @@ const ProductTable = () => {
 
     console.log(jsosn);
     axios
-      .put("https://8080-addccdfdabcedefcacfefaabebceecbecadec.project.examly.io/products", jsosn)
+      .put("https://8080-addccdfdabcedefcacfefaabebceecbecadec.project.examly.io/product", jsosn)
       .then(function (response) {
         console.log(response);
       })
@@ -125,7 +125,7 @@ const ProductTable = () => {
   const deleteProduct = (id) => {                                                   //delete product
     console.log(id);
     axios
-      .delete("https://8080-addccdfdabcedefcacfefaabebceecbecadec.project.examly.io/products", { params: { id } })
+      .delete("https://8080-addccdfdabcedefcacfefaabebceecbecadec.project.examly.io/product", { params: { id } })
       .then(function (response) {
         console.log(response);
       })
@@ -153,7 +153,7 @@ const ProductTable = () => {
     };
 
     axios
-      .post("https://8080-addccdfdabcedefcacfefaabebceecbecadec.project.examly.io/products", json)
+      .post("https://8080-addccdfdabcedefcacfefaabebceecbecadec.project.examly.io/product", json)
       .then((res) => {
         setbar(barcode);
         setquan(quantity);
