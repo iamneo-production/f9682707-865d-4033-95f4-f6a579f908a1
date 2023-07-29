@@ -18,7 +18,7 @@ function Header() {
   const [war,setwar]=useState("");
   useEffect(()=>{
     if(!localStorage.getItem("auth")){
-      window.location="/login"
+      window.location="/"
     }
     axios.get("https://8080-addccdfdabcedefcacfefaabebceecbecadec.project.examly.io/product").then(response=>setpro(response.data)).catch(err=>console.log(err));
   },)

@@ -38,7 +38,7 @@ function App() {
           <Route exact path='/report' element={<Report />}></Route> 
           <Route exact path='/location' element={<Location />}></Route>
           <Route exact path='/alerts' element={<Alerts />}></Route>
-          <Route exact path='/login' element={<LoginPage/>}></Route>
+          <Route exact path='/' element={<LoginPage/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -24,7 +24,7 @@ const ProductTable = () => {
 
   React.useEffect(() => {
     if (!localStorage.getItem("auth")) {
-      window.location = "/login";                                             //login
+      window.location = "/";                                             //login
     }
     fetchData();
     axios
