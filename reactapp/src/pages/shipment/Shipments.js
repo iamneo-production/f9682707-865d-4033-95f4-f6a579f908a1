@@ -12,7 +12,7 @@ function Shipments() {
       window.location="/login"
     }
 
-    axios.get('https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/shipment') // Replace with your backend endpoint
+    axios.get('https://8080-faffbeebcbdcdabcedefcacfefaabeaeaadbdbabf.project.examly.io/shipment') 
       .then(response => {
         setdatas(response.data);
         console.log(datas);

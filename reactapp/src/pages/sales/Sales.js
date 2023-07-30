@@ -12,7 +12,7 @@ const [sal,setsal]=useState([]);
       if(!localStorage.getItem("auth")){
         window.location="/login"
       }
-        axios.get("https://8080-cdbcddcfaabcedefcacfefaabebceecbecadec.project.examly.io/sales").then(response=>setsal(response.data)).catch(err=>console.log(err));
+        axios.get("https://8080-faffbeebcbdcdabcedefcacfefaabeaeaadbdbabf.project.examly.io/sales").then(response=>setsal(response.data)).catch(err=>console.log(err));
     },)
     return (
         <div>
@@ -43,7 +43,7 @@ const [sal,setsal]=useState([]);
                 <td>{item.productId}</td>
                 <td>{item.quantity}</td>
                 <td>{item.price}</td>
-                <td>{item.timestamp}</td>
+                <td>{item.date}</td>
                 
                 
               </tr>
