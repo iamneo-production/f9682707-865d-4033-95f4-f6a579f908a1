@@ -12,7 +12,7 @@ const [sal,setsal]=useState([]);
       if(!localStorage.getItem("auth")){
         window.location="/"
       }
-        axios.get("https://8080-addccdfdabcedefcacfefaabebceecbecadec.project.examly.io/sales").then(response=>setsal(response.data)).catch(err=>console.log(err));
+        axios.get("https://8080-addccdfdabcedefcacfefaabeaeaadbdbabf.project.examly.io/sales").then(response=>setsal(response.data)).catch(err=>console.log(err));
     },)
     return (
         <div>
